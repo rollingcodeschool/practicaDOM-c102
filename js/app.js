@@ -17,8 +17,17 @@ const cambiarTitulo = ()=>{
 const crearParrafo = () =>{
     console.log('desde crearParrafo')
     //crear un nuevo parrafo
-
+    const parrafoNuevo = document.createElement('p');
+    parrafoNuevo.innerHTML = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum eveniet dignissimos porro. Inventore minus nulla nesciunt accusantium eaque! Animi, quas beatae. Quo placeat perspiciatis ut cupiditate eligendi. Odio quisquam excepturi voluptatibus eaque dolor nobis quae ut commodi, nesciunt, dolorum laboriosam alias veritatis facilis magni nam, placeat itaque! Sapiente, laborum error?';
+    parrafoNuevo.className = 'lead';
+    console.log(parrafoNuevo)
+    
     //insertar el parrafo nuevo en el segundo section
+    const secciones = document.querySelectorAll('section');
+    //insertar el nuevo elemento
+    // secciones[1].appendChild(parrafoNuevo); //agrega el nodo al final
+    // secciones[1].prepend(parrafoNuevo);
+    secciones[1].insertBefore(parrafoNuevo, btnVerMas)
 }
 
 //agregar un evento a un elemento del html
